@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fitnnes Life</title>
+  <link rel="shortcut icon" type="image" href="imagenes/logoantonio.png" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="menu container d-flex justify-content-between align-items-center">
+      <a href="/" class="logo d-flex align-items-center" style="text-decoration: none"><img
+          src="imagenes/logoantonio.png" alt="" width="50px" />Fitnnes
+        Life</a>
+      <input type="checkbox" id="menu" class="d-done" />
+      <label for="menu" class="d-lg-none">
+        <img src="imagenes/menu.png" class="icono-menu" alt="menu" />
+      </label>
+      <nav class="navbar" style="z-index: 1">
+        <ul>
+          <li class="me-3"><a href="/">inicio</a></li>
+          <li class="me-3"><a href="/nosotros">sobre nosotros</a></li>
+          <li class="me-3"><a href="/servicios">servicios</a></li>
+          <li class="me-3"><a href="/productos">productos</a></li>
+          <li class="me-3"><a href="/equipo">equipo</a></li>
+          <li class="me-3"><a href="/contacto">contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header-content container d-flex flex-column flex-md-row align-items-center justify-content-between">
+      <div
+        class="header-txt text-center text-md-start col-lg-6 d-flex flex-column justify-content-center align-items-center text-center text-section">
+        <h1>Bienvenidos a Fitnnes Life</h1>
+        <p>
+          Tu gimnasio de confianza para alcanzar tus objetivos de fitness y
+          bienestar. Únete a nuestra comunidad y transforma tu vida con
+          nosotros. Ofrecemos una variedad de planes y servicios adaptados a
+          tus necesidades.
+        </p>
+        <a href="/#plans" class="btn btn-danger">Mas informacion</a>
+      </div>
+      <div class="images d-none d-lg-block" style="box-sizing: border-box; overflow-x: hidden">
+        <img src="imagenes/bababa-Photoroom.png" alt="" class="img-fluid"
+          style="mask-image: linear-gradient(black 80%, transparent)" />
+      </div>
+    </div>
+  </header>
+  <style>
+    .card-plan {
+      transition: all 0.5s ease-in-out;
+      overflow: hidden;
+    }
+
+    .card-plan .plan-benefits {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height 1.2s ease-in-out, opacity 1s ease-in-out;
+    }
+
+    .card-plan:hover .plan-benefits {
+      max-height: 700px;
+      opacity: 1;
+    }
+  </style>
+  <section class="about py-5">
+    <div class="about-content container d-flex flex-column flex-md-row align-items-center justify-content-between">
+      <div class="about-txt text-center text-md-start">
+        <span>Transforma tu vida</span>
+        <h2>Bienvenido a Fitnnes Life</h2>
+        <hr />
+        <p>
+          En Fitnnes Life creemos que todos merecen alcanzar su mejor versión.
+          Nos especializamos en ofrecer un ambiente motivador, con
+          entrenadores capacitados y equipos de última generación. Ya sea que
+          quieras tonificar tu cuerpo o mejorar tu salud general, estamos aquí
+          para apoyarte en cada paso de tu camino.
+        </p>
+        <p>
+          Únete a nosotros y empieza tu viaje hacia un estilo de vida más
+          saludable. Ofrecemos entrenamientos personalizados, planes de
+          nutrición y un ambiente donde la motivación nunca falta.
+        </p>
+      </div>
+      <div class="about-img">
+        <img src="imagenes/e1.jpg" alt="" class="img-fluid" data-aos="fade-down-left" data-aos-duration="1000" />
+      </div>
+    </div>
+    <div
+      class="about-content container d-flex flex-column-reverse flex-md-row align-items-center justify-content-between">
+      <div class="about-img">
+        <img src="imagenes/bg.jpg" alt="" class="img-fluid" data-aos="fade-down-right" data-aos-duration="1000" />
+      </div>
+      <div class="about-txt text-center text-md-start">
+        <span>Vive una experiencia única</span>
+        <h2>Bienvenido a nuestra comunidad</h2>
+        <hr />
+        <p>
+          En Fitnnes Life, entendemos que cada persona tiene objetivos y
+          ritmos diferentes. Por eso, ofrecemos planes flexibles adaptados a
+          tus necesidades, para que puedas entrenar a tu propio ritmo y con el
+          apoyo que necesites. ¡Estamos aquí para ayudarte a alcanzar tus
+          metas!
+        </p>
+        <p>
+          Ya sea que quieras perder peso, ganar músculo o simplemente
+          mantenerte saludable, en Fitnes Life te brindamos todas las
+          herramientas necesarias para lograrlo de manera efectiva.
+        </p>
+      </div>
+    </div>
+  </section>
+  <div class="container-fluid p-4" id="plans" style="background-color: #24272e">
+    <div class="row d-flex justify-content-center align-items-center flex-wrap mt-5" style="gap: 30px">
+      <div class="card rounded-4 border-0 shadow-sm card-plan" style="max-width: 340px"
+        th:each="membership : ${memberships}">
+        <div class="card-body px-4 py-5">
+          <div class="text-center text-lg-start">
+            <h2 class="h4 text-muted" th:text="'Plan ' + ${membership.name}"></h2>
+            <div class="mt-4">
+              <p class="mb-0">
+                <span class="display-5 fw-light text-dark"
+                  th:text="${#numbers.formatInteger(membership.price, 0, 'COMMA')}"></span>
+                <span class="fs-6 fw-medium text-secondary">/mes</span>
+              </p>
+              <div class="plan-benefits mt-5">
+                <div th:each="benefit : ${#strings.arraySplit(membership.benefits, '•')}">
+                  <i class="bi bi-check"></i>
+                  <span class="fw-medium text-secondary" style="font-size: 13px" th:text="${benefit.trim()}"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer bg-white border-0 px-4 pb-4">
+          <a href="/contacto" class="btn btn-dark w-100 rounded-pill text-sm fw-semibold">
+            Get started
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="info py-5">
+    <div
+      class="about-content container d-flex flex-column-reverse flex-md-row align-items-center justify-content-center">
+      <div class="about-txt text-center">
+        <h2>¿Por qué elegirnos?</h2>
+        <p>
+          En Fitnes Life, nos esforzamos por ofrecerte una experiencia de
+          entrenamiento única. Nuestro equipo de entrenadores está altamente
+          calificado y te ayudará a alcanzar tus objetivos de manera segura y
+          eficaz. Además, contamos con un ambiente amigable y motivador que te
+          impulsará a seguir adelante.
+        </p>
+        <a href="#" class="btn btn-danger">Mas informacion</a>
+      </div>
+    </div>
+  </section>
+  <section class="contact text-center py-5 bg-light">
+    <div class="contact-content container">
+      <span>Fitnnes Life</span>
+      <h2>+57 323 4580755</h2>
+      <p>
+        Contáctanos para obtener más información sobre nuestros planes y
+        servicios. Estaremos encantados de ayudarte en tu camino hacia una
+        vida más saludable y activa.
+      </p>
+    </div>
+  </section>
+  <footer class="footer bg-dark text-white pt-5">
+    <hr class="footer-line mx-auto" />
+    <div class="container">
+      <div class="row text-center text-md-start">
+        <div class="col-md-4 mb-3">
+          <h5>Fitnnes Life</h5>
+          <div class="social-icons d-flex justify-content-center justify-content-md-start gap-2">
+            <a href="#"><i class="bi bi-facebook text-white"></i></a>
+            <a href="#"><i class="bi bi-instagram text-white"></i></a>
+            <a href="#"><i class="bi bi-linkedin text-white"></i></a>
+            <a href="#"><i class="bi bi-youtube text-white"></i></a>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h5>Enlaces</h5>
+          <ul class="list-unstyled">
+            <li>
+              <a href="/" class="text-white text-decoration-none">Inicio</a>
+            </li>
+            <li>
+              <a href="/nosotros" class="text-white text-decoration-none">Sobre nosotros</a>
+            </li>
+            <li>
+              <a href="/servicios" class="text-white text-decoration-none">Servicios</a>
+            </li>
+            <li>
+              <a href="/productos" class="text-white text-decoration-none">Productos</a>
+            </li>
+            <li>
+              <a href="/equipo" class="text-white text-decoration-none">Equipo</a>
+            </li>
+            <li>
+              <a href="/contacto" class="text-white text-decoration-none">Contacto</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h5>Contacto</h5>
+          <p>Correo: contacto@fitnesslife.com</p>
+          <p>Teléfono: +57 323 4580755</p>
+          <p>Ubicación: Cartagena, Colombia</p>
+        </div>
+      </div>
+      <div class="whatsapp-button position-fixed end-0 bottom-0 m-3">
+        <a href="https://wa.me/57325652" target="_blank"><img src="imagenes/icons8-whatsapp-48.png" alt="WhatsApp"
+            style="width: 50px; height: 50px" /></a>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>

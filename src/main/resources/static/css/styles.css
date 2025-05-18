@@ -1,0 +1,415 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  background: linear-gradient(rgba(29, 30, 35, 0.8), rgba(29, 30, 35, 0.8)),
+    url(../imagenes/fondogymblack-Photoroom.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  min-height: 70vh;
+  padding: 90px 0 0 0;
+  height: 100vh;
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: "Bebas Neue", sans-serif;
+  color: rgb(255, 255, 255);
+  font-size: 25px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.menu .navbar ul li {
+  position: relative;
+  float: left;
+}
+
+.menu .navbar ul li a {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 18px;
+  padding: 20px;
+  color: white;
+  display: block;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.menu .navbar ul li a:hover {
+  color: red;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 90vh;
+  gap: 50px;
+}
+
+.images img {
+  max-width: 70%;
+  height: auto;
+}
+
+.header-txt {
+  max-width: 600px;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.header-txt h1 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 85px;
+  line-height: 1;
+  color: aliceblue;
+}
+
+p {
+  font-size: 17px;
+  color: white;
+  margin-bottom: 35px;
+}
+
+.btn-1 {
+  display: inline-block;
+  padding: 11px 35px;
+  color: white;
+  text-transform: uppercase;
+  background: linear-gradient(
+    90deg,
+    rgb(22, 37, 135) 0%,
+    rgb(86, 22, 158) 100%
+  );
+}
+
+.about,
+.about2 {
+  padding: 50px 0;
+  background-color: #24272e;
+  margin-bottom: 0;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.about-txt {
+  flex-basis: 50%;
+}
+
+span {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: red;
+}
+
+h2,
+h3 {
+  font-family: "Bebas Neue", sans-serif;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 35px;
+  color: white;
+  margin: 15px 0;
+}
+
+hr {
+  border: 1px solid rgb(248, 0, 0);
+  width: 10%;
+  margin-bottom: 20px;
+  opacity: 1;
+}
+
+.about-img {
+  flex-basis: 50%;
+}
+
+.about-img img {
+  border-radius: 15px;
+}
+
+.plans {
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #24272e;
+}
+
+.plans hr {
+  width: 5%;
+}
+
+.plans-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: -10px;
+  padding: 40px;
+}
+
+.plan-1 {
+  flex-basis: calc(33.3% - 20px);
+  border: 1px solid #51515179;
+  padding: 30px 50px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+}
+
+.plan-1 span {
+  font-size: 40px;
+  font-weight: 800;
+  color: white;
+}
+
+.plan-1 h3 {
+  padding: 8px;
+  font-size: 25px;
+  color: white;
+  margin: 25px 0 35px 0;
+  background: linear-gradient(rgb(22, 37, 135) 0%, rgb(86, 22, 158) 100%);
+  border-radius: 15px;
+}
+
+.blog {
+  padding: 100px 0;
+  text-align: center;
+  background-color: #24272e;
+}
+
+.blog-content {
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+}
+
+.info {
+  padding: 50px 0;
+  background-color: #24272e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.contact {
+  padding: 100px 0;
+  background: linear-gradient(rgba(35, 34, 34, 0.4), rgba(34, 33, 33, 0.4)),
+    url(../imagenes/b3.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contact-content {
+  text-align: center;
+}
+
+.footer {
+  background-color: #1e1e1e;
+  color: #d1d1d1;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+  font-family: Arial, sans-serif;
+}
+
+.footer-line {
+  border: none;
+  height: 2px;
+  background-color: rgb(97, 95, 95);
+  width: 70%;
+  margin: 40px auto;
+}
+
+.footer h5 {
+  color: #ffffff;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer ul li a {
+  color: #d1d1d1;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.footer ul li a:hover {
+  color: #ff4f4f;
+}
+
+.social-icons a {
+  color: #d1d1d1;
+  font-size: 1.5rem;
+  margin-right: 15px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ff4f4f;
+}
+
+.footer p {
+  margin-bottom: 0.5rem;
+}
+
+.whatsapp-button {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+
+.whatsapp-button img {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-button img:hover {
+  transform: scale(1.1);
+}
+
+#menu {
+  display: none;
+}
+
+.menu-icono {
+  width: 30px;
+  cursor: pointer;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+#menu:checked ~ .navbar ul {
+  display: flex;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.9);
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  width: 200px;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+@media (max-width: 991px) {
+  .header {
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header-txt h1 {
+    margin-top: 150px;
+  }
+
+  .header-txt {
+    position: relative;
+    z-index: 2;
+  }
+
+  .header-txt h1,
+  .header-txt p {
+    color: white;
+  }
+
+  .header-txt .btn-1 {
+    background: #c0392b;
+    border: none;
+    color: white;
+    transition: 0.3s ease;
+  }
+
+  .header-txt .btn-1:hover {
+    background: #e74c3c;
+    color: white;
+  }
+
+  .navbar ul li {
+    margin: 10px 0;
+  }
+
+  .icono-menu {
+    width: 40px;
+    cursor: pointer;
+  }
+
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    background: rgb(0, 0, 0);
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    width: 200px;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: right;
+    z-index: 1000;
+  }
+
+  .menu label {
+    display: block;
+  }
+
+  #menu:checked ~ .navbar ul {
+    display: flex;
+  }
+
+  .menu label {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 100;
+  }
+}
