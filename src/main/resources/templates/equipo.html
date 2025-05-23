@@ -4,11 +4,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fitnnes Life</title>
+  <title>Fitnnes Life - Equipo</title>
   <link rel="shortcut icon" type="image" href="imagenes/logoantonio.png" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="css/styleteam.css" />
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 
 <body>
@@ -21,7 +21,7 @@
       <label for="menu" class="d-lg-none">
         <img src="imagenes/menu.png" class="icono-menu" alt="menu" />
       </label>
-      <nav class="navbar">
+      <nav class="navbar" style="z-index: 1">
         <ul>
           <li class="me-3"><a href="/">inicio</a></li>
           <li class="me-3"><a href="/nosotros">sobre nosotros</a></li>
@@ -32,63 +32,23 @@
         </ul>
       </nav>
     </div>
-    <div class="header-content container d-flex flex-column flex-md-row align-items-center justify-content-between">
-      <div class="p-4 bg-blue text-dark rounded shadow position-relative movable">
+    <div class="header-content container d-flex flex-column flex-md-row align-items-center justify-content-center">
+      <div
+        class="header-txt text-center col-lg-6 d-flex flex-column justify-content-center align-items-center text-section">
+        <h1>EQUIPO</h1>
+      </div>
+      <div class="p-4 bg-primary text-dark rounded-4 shadow position-relative movable">
         <div class="d-flex justify-content-between align-items-start mb-3">
           <h2 class="fw-bold mb-0">
             COMPROMETIDOS A BRINDAR UN EXCELENTE SERVICIO
           </h2>
         </div>
         <div class="text-below">
-          <h3>!CONOCE A NUESTRO PERSONAL¡</h3>
+          <h3>¡CONOCE A NUESTRO PERSONAL!</h3>
         </div>
       </div>
-    </div>
   </header>
-  <style>
-    .custom-entrenadores {
-      min-width: 250px;
-      height: 500px;
-      text-align: center;
-      margin-right: 5px;
-      box-sizing: content-box;
-      overflow: hidden;
-      display: flex;
-      justify-content: center;
-      border-radius: 20px;
-
-      box-shadow:
-        20px 20px 60px #151515,
-        -20px -20px 60px #272727;
-    }
-
-    .social-icon {
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      transition: all 0.3s ease;
-      color: white;
-      animation: slide-in-top 0.3s both;
-    }
-
-    .social-icon.instagram:hover {
-      background-color: #E1306C;
-    }
-
-    .social-icon.whatsapp:hover {
-      background-color: #25D366;
-    }
-
-    .social-icon.facebook:hover {
-      background-color: #3b5998;
-    }
-
-    .social-icon:hover {
-      transform: scale(1.1);
-      filter: brightness(1.2);
-    }
-  </style>
-  <section class="section-trainers">
+  <section class="section-trainers py-5 bg-dark">
     <div class="container my-5">
       <div class="row text-center">
         <div class="container-fluid mt-4 w-100 w-sm-100" style="padding: 1em;">
@@ -231,8 +191,15 @@
         </div>
       </div>
   </section>
-  <section class="contact">
-    <div class="contact-content container"></div>
+  <section class="contact text-center py-5 bg-light">
+    <div class="contact-content container">
+      <span>Equipo</span>
+      <p>
+        Conoce a los expertos que te guiarán en tu transformación<br />
+        Nuestro equipo está compuesto por entrenadores certificados, apasionados por ayudarte a mejorar tu vida. ¡Conoce
+        a tu próximo entrenador y comienza tu camino hacia el éxito fitness!
+      </p>
+    </div>
   </section>
   <footer class="footer bg-dark text-white pt-5">
     <hr class="footer-line mx-auto" />
@@ -270,16 +237,16 @@
             </li>
           </ul>
         </div>
-        <div class="col-md-4 mb-3" style="color: #fff;">
-          <h5 style="color: #fff;">Contacto</h5>
-          <p style="color: #fff;">Correo: contacto@fitnesslife.com</p>
-          <p style="color: #fff;">Teléfono: +57 323 4580755</p>
-          <p style="color: #fff;">Ubicación: Cartagena, Colombia</p>
+        <div class="col-md-4 mb-3">
+          <h5>Contacto</h5>
+          <p>Correo: contacto@fitnesslife.com</p>
+          <p>Teléfono: +57 323 4580755</p>
+          <p>Ubicación: Cartagena, Colombia</p>
         </div>
       </div>
       <div class="whatsapp-button position-fixed end-0 bottom-0 m-3">
-        <a href="https://wa.me/573234580755" target="_blank"><img src="imagenes/icons8-whatsapp-48.png" alt="WhatsApp"
-            style="width: 50px; height: 50px" /></a>
+        <a href="https://wa.me/573234580755?text=¡Hola! Quiero más información." target="_blank"><img
+            src="imagenes/icons8-whatsapp-48.png" alt="WhatsApp" style="width: 50px; height: 50px" /></a>
       </div>
     </div>
   </footer>

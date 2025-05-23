@@ -4,11 +4,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fitnnes Life</title>
+  <title>Fitnnes Life - Servicios</title>
   <link rel="shortcut icon" type="image" href="imagenes/logoantonio.png" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
-  <link rel="stylesheet" href="css/styleservice.css" />
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 
 <body>
@@ -21,7 +21,7 @@
       <label for="menu" class="d-lg-none">
         <img src="imagenes/menu.png" class="icono-menu" alt="menu" />
       </label>
-      <nav class="navbar">
+      <nav class="navbar" style="z-index: 1">
         <ul>
           <li class="me-3"><a href="/">inicio</a></li>
           <li class="me-3"><a href="/nosotros">sobre nosotros</a></li>
@@ -32,14 +32,11 @@
         </ul>
       </nav>
     </div>
-    <div class="brochazo-con-texto">
-      <img src="imagenes/fondo-brochazo.png" alt="Brochazo" class="brochazo-img" />
-      <div class="texto-sobre-brochazo">SERVICIOS</div>
-      <div class="boton-planes">
-        <a href="/#plans"><button class="boton-moderno">
-            <img src="imagenes/iconorayo1.png" alt="Icono izquierdo" class="icono-boton izquierdo" />
-            <span class="texto-boton">Ver Planes</span>
-            <img src="imagenes/iconorayo2.png" alt="Icono derecho" class="icono-boton derecho" /></button></a>
+    <div class="header-content container d-flex flex-column flex-md-row align-items-center justify-content-center">
+      <div
+        class="header-txt text-center col-lg-6 d-flex flex-column justify-content-center align-items-center text-section">
+        <h1>SERVICIOS</h1>
+        <a href="/#plans" class="btn btn-primary btn-lg px-5">Ver Planes</a>
       </div>
     </div>
   </header>
@@ -48,69 +45,102 @@
       <h1 style="font-size: 50px">TE GUIAMOS 1 A 1 HACIA TU META</h1>
     </div>
   </section>
-  <section class="bg-dark text-white py-5">
+  <section class="py-5 bg-dark text-white">
+    <div class="container text-center mb-5">
+      <h2 class="display-5 fw-bold">Nuestros Servicios</h2>
+      <p class="text-white">
+        Elige el entrenamiento perfecto para tu estilo de vida
+      </p>
+    </div>
     <div class="container">
-      <div class="row text-center">
-        <div class="col-md-4 mb-4">
+      <div class="row g-4">
+        <div class="col-md-4">
           <div
-            class="p-4 bg-white text-dark rounded shadow border-primary border-3 border text-start position-relative">
-            <div class="d-flex justify-content-between align-items-start mb-3">
-              <h2 class="fw-bold mb-0">
-                CLASE DE <span class="text-primary">BOXEO</span>
-              </h2>
-              <img src="imagenes/icomoboxx.png" alt="Ícono Boxeo" style="width: 300px; height: 100px" />
+            class="card h-100 bg-white text-dark border-0 shadow d-flex flex-column align-items-start text-start rounded-4"
+            style="min-height: 340px">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <h5 class="card-title fw-bold">CLASE DE BOXEO</h5>
+                <img src="imagenes/icomoboxx.png" alt="Ícono Boxeo" style="width: 70px; height: auto" />
+              </div>
+              <hr />
+              <p class="card-text text-dark">
+                Aprende técnicas de golpeo, mejora tu resistencia y fortalece
+                cuerpo y mente con entrenadores expertos.
+              </p>
+              <ul class="list-unstyled text-muted small">
+                <li>
+                  ✔ Ideal para mejorar reflejos y acondicionamiento físico
+                </li>
+                <li>✔ No necesitas experiencia previa</li>
+                <li>✔ Grupos de todos los niveles</li>
+              </ul>
             </div>
-            <p>
-              Aprende técnicas de golpeo, mejora tu resistencia y fortalece
-              cuerpo y mente. Entrenadores expertos te guiarán de manera
-              segura con entrenamientos dinámicos.
-            </p>
           </div>
         </div>
-        <div class="col-md-4 mb-4">
+        <div class="col-md-4">
           <div
-            class="p-4 bg-white text-dark rounded shadow border-primary border-3 border text-start position-relative">
-            <div class="d-flex justify-content-between align-items-start mb-3">
-              <h2 class="fw-bold mb-0">
-                CLASE DE <span class="text-primary">ZUMBA</span>
-              </h2>
-              <img src="imagenes/ICONDEZUMBA.png" alt="Ícono Zumba" style="width: 300px; height: 100px" />
+            class="card h-100 bg-white text-dark border-0 shadow d-flex flex-column align-items-start text-start rounded-4"
+            style="min-height: 340px">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <h5 class="card-title fw-bold">CLASE DE ZUMBA</h5>
+                <img src="imagenes/ICONDEZUMBA.png" alt="Ícono Zumba" style="width: 70px; height: auto" />
+              </div>
+              <hr />
+              <p class="card-text text-dark">
+                Disfruta del ritmo, quema calorías y libera el estrés con
+                nuestras clases de Zumba llenas de energía.
+              </p>
+              <ul class="list-unstyled text-muted small">
+                <li>✔ Ritmos latinos y música enérgica</li>
+                <li>✔ Perfecto para tonificar y divertirse</li>
+                <li>✔ Ejercicios sin impacto para todas las edades</li>
+              </ul>
             </div>
-            <p>
-              Disfruta del ritmo, quema calorías y libera el estrés con
-              nuestras clases de Zumba. Perfectas para todas las edades, te
-              harán moverte y sonreír desde el primer minuto.
-            </p>
           </div>
         </div>
-        <div class="col-md-4 mb-4">
+        <div class="col-md-4">
           <div
-            class="p-4 bg-white text-dark rounded shadow border-primary border-3 border text-start position-relative">
-            <div class="d-flex justify-content-between align-items-start mb-3">
-              <h2 class="fw-bold mb-0">
-                CLASE DE <span class="text-primary">CROSSFIT</span>
-              </h2>
-              <img src="imagenes/ICONCROSSFIT.png" alt="Ícono Crossfit" style="width: 300px; height: 100px" />
+            class="card h-100 bg-white text-dark border-0 shadow d-flex flex-column align-items-start text-start rounded-4"
+            style="min-height: 340px">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <h5 class="card-title fw-bold">CLASE DE CROSSFIT</h5>
+                <img src="imagenes/ICONCROSSFIT.png" alt="Ícono CrossFit" style="width: 70px; height: auto" />
+              </div>
+              <hr />
+              <p class="card-text text-dark">
+                Entrenamientos funcionales de alta intensidad que mejoran
+                fuerza, velocidad, resistencia y forma física.
+              </p>
+              <ul class="list-unstyled text-muted small">
+                <li>✔ Sesiones dinámicas y retadoras</li>
+                <li>✔ Mejora tu condición atlética en semanas</li>
+                <li>✔ Adaptable para principiantes y avanzados</li>
+              </ul>
             </div>
-            <p>
-              Entrenamientos funcionales de alta intensidad para llevarte al
-              límite. Mejora fuerza, velocidad, resistencia y forma física con
-              rutinas adaptadas a tu nivel.
-            </p>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <section class="contact">
-    <div class="contact-content container"></div>
+  <section class="contact text-center py-5 bg-light">
+    <div class="contact-content container">
+      <span>Servicios</span>
+      <p>
+        ¿Listo para alcanzar tus objetivos de salud y bienestar?<br />
+        Descubre nuestros entrenamientos personalizados y programas diseñados para que logres lo que siempre has soñado.
+        ¡Únete a nosotros y empieza hoy mismo con una clase gratis!
+      </p>
+    </div>
   </section>
   <footer class="footer bg-dark text-white pt-5">
     <hr class="footer-line mx-auto" />
     <div class="container">
       <div class="row text-center text-md-start">
         <div class="col-md-4 mb-3">
-          <h5>Fitnes Life</h5>
+          <h5>Fitnnes Life</h5>
           <div class="social-icons d-flex justify-content-center justify-content-md-start gap-2">
             <a href="#"><i class="bi bi-facebook text-white"></i></a>
             <a href="#"><i class="bi bi-instagram text-white"></i></a>
@@ -143,16 +173,14 @@
         </div>
         <div class="col-md-4 mb-3">
           <h5>Contacto</h5>
-          <ul class="list-unstyled">
-            <li>Correo: contacto@fitnesslife.com</li>
-            <li>Teléfono: +57 323 4580755</li>
-            <li>Ubicación: Cartagena, Colombia</li>
-          </ul>
+          <p>Correo: contacto@fitnesslife.com</p>
+          <p>Teléfono: +57 323 4580755</p>
+          <p>Ubicación: Cartagena, Colombia</p>
         </div>
       </div>
       <div class="whatsapp-button position-fixed end-0 bottom-0 m-3">
-        <a href="https://wa.me/57325652" target="_blank"><img src="imagenes/icons8-whatsapp-48.png" alt="WhatsApp"
-            style="width: 50px; height: 50px" /></a>
+        <a href="https://wa.me/573234580755?text=¡Hola! Quiero más información." target="_blank"><img
+            src="imagenes/icons8-whatsapp-48.png" alt="WhatsApp" style="width: 50px; height: 50px" /></a>
       </div>
     </div>
   </footer>
